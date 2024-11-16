@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-weight:lighter;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #000000;
+    background-image: url('/unique-caption/images/bck01.png'); /* Background image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out; /* Faster fade-in */
+}
+
+header {
+    text-align: center;
+    padding: 0px;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in */
+}
+
+/* Welcome Text (Above Nav) */
+.welcome-text {
+    text-align: center;
+    margin-top: 0;
+}
+
+.welcome-text h1 {
+    font-family: 'Georgia', serif; /* Use Georgia for the h1 */
+    font-size: 4.5em; /* Adjust size as per preference */
+    font-weight: bold;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+}
+
+/* Styling for the word "Captionary" */
+.captionary-word {
+    color: #f39c12; /* Change this color if you want a different font color */
+    font-family: 'Georgia', serif; /* Customize the font for this word */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background for the nav */
+    text-align: center;
+    padding: 10px 0;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in */
+}
+
+nav a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out; /* Smooth color change effect */
+}
+
+nav a:hover {
+    background-image: linear-gradient(45deg, #1e90ff, #00bfff); /* Gradient blue color */
+    color: transparent; /* Makes the text transparent to show the gradient */
+    background-clip: text; /* Clips the background to text */
+}
+
+/* Updated Container */
+.container {
+    max-width: 800px; /* Increased to 800px */
+    width: 90%; /* Ensures responsiveness for smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Adds rounded corners to the container */
+    flex: 1;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in */
+    color:#f39c12;
+    text-align:center;
+}
+
+/* Hide the container on the homepage */
+.home-page .container {
+    display: none;
+}
+
+/* Updated h2 Styling */
+/* Updated h2 Styling */
+h2 {
+    position: relative; /* Required for the ::after pseudo-element */
+    margin-top: 0;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    font-size: 40px;
+    overflow: hidden; /* Ensures the underline effect stays within the element */
+    color: #f39c12; /* Change this to a visible color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Added shadow for contrast */
+}
+
+/* Adding the underline effect using ::after */
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Positioning just below the text */
+    width: 0; /* Initially, width is 0 */
+    height: 3px; /* Thickness of the underline */
+    background: #f39c12; /* Underline color */
+    transition: width 0.4s ease; /* Smooth transition on hover */
+}
+
+/* On hover, the underline expands */
+h2:hover::after {
+    width: 100%; /* Expands to full width */
+}
+
+/* Optional: Adding a subtle bounce effect to underline */
+h2:hover::after {
+    animation: bounceUnderline 0.4s ease;
+}
+
+/* Bounce underline animation */
+@keyframes bounceUnderline {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 110%; /* Slightly overshoot for bounce effect */
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* Paragraph styling */
+p {
+    line-height: 1.6;
+    font-size: 25px; /* Increases text size of captions */
+    font-weight: lighter; /* Makes captions bold */
+    font-family: 'Roboto', sans-serif; /* Use Roboto for paragraph */
+    animation: fadeIn 1s ease-in-out; /* Add fade-in */
+}
+
+/* Description Section */
+.description {
+    text-align: left;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.0); /* Transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 2.0; /* Increased line spacing */
+    color: rgb(255, 255, 255); /* Changed text color to white */
+    font-weight: lighter;
+    border: 2px solid white; /* White border */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    animation: fadeIn 1s ease-in-out; /* Add fade-in */
+    font-size: 1em;
+}
+
+/* Instagram Icon */
+.instagram-icon {
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+}
+
+.instagram-icon:hover {
+    color: #f39c12;
+}
+.social-links a:hover {
+    color: #f39c12; /* Optional: Change color on hover */
+}
+
+.social-links i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* Fancy Scrollbar Styling (for all pages except homepage) */
+html:not(.home-page) {
+    scrollbar-width: thin; /* Firefox: Set scrollbar thickness */
+    scrollbar-color: #f39c12 #333; /* Firefox: Set scrollbar color (thumb & track) */
+}
+
+/* Webkit browsers (Chrome, Safari, etc.) */
+html:not(.home-page)::-webkit-scrollbar {
+    width: 10px; /* Adjust width of the scrollbar */
+}
+
+html:not(.home-page)::-webkit-scrollbar-thumb {
+    background-color: #f39c12; /* Thumb color */
+    border-radius: 10px; /* Rounded corners on thumb */
+}
+
+html:not(.home-page)::-webkit-scrollbar-track {
+    background-color: #333; /* Track color */
+    border-radius: 10px; /* Rounded corners on track */
+}
+
+html:not(.home-page)::-webkit-scrollbar-button {
+    display: none; /* Hides the scroll buttons (up/down arrows) */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
